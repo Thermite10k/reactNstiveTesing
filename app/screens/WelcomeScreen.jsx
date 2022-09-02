@@ -1,24 +1,29 @@
 import { View, Text, StyleSheet, Image, ImageBackground } from "react-native";
-
+import AppText from "../components/AppText";
+import AppButton from "../components/AppButton/AppButton";
 const WelcomeScreen = () => {
   return (
     <ImageBackground
-      style={styles.imgContainer}
+      style={styles.background}
       source={require("../assets/background.jpg")}
     >
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <Text>Lorem ipsum dolor sit.</Text>
+        <AppText>Lorem ipsum dolor sit.</AppText>
       </View>
       <View style={styles.buttonContaier}>
-        <View style={[styles.button, { backgroundColor: "#fc5c65" }]}></View>
-        <View style={[styles.button, { backgroundColor: "#4ECDC4" }]}></View>
+        <AppButton variant="secondary">
+          <Text style={styles.buttonText}>Register</Text>
+        </AppButton>
+        <AppButton variant="primary">
+          <Text style={styles.buttonText}>Login</Text>
+        </AppButton>
       </View>
     </ImageBackground>
   );
 };
 const styles = StyleSheet.create({
-  imgContainer: {
+  background: {
     flex: 1,
     alignItems: "center",
     paddingTop: 50,
@@ -27,7 +32,7 @@ const styles = StyleSheet.create({
   logoContainer: {
     alignItems: "center",
   },
-  logo: { width: 170, height: 170 },
+  logo: { width: 100, height: 100 },
   buttonContaier: {
     width: "100%",
   },
@@ -35,5 +40,9 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 50,
   },
+  buttonContaier: {
+    width: "100%",
+  },
+  buttonText: { color: "white", fontWeight: "800", fontSize: 20 },
 });
 export default WelcomeScreen;

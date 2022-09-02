@@ -1,7 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import { useState } from "react";
-import WelcomeScreen from "./screens/WelcomeScreen";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 export default function App() {
   return (
@@ -14,6 +15,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "green",
   },
 });
