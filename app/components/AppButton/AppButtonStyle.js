@@ -9,6 +9,11 @@ const styles = StyleSheet.create({
     margin: 15,
     borderRadius: 25,
   },
+  buttonText: {
+    color: colors.white,
+    fontSize: 18,
+    textTransform: "uppercase",
+  },
 });
 
 export default styles;

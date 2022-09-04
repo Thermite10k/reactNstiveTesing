@@ -15,7 +15,7 @@ const WelcomeScreen = () => {
         <AppButton variant="secondary">
           <Text style={styles.buttonText}>Register</Text>
         </AppButton>
-        <AppButton variant="primary">
+        <AppButton variant="primary" onPress={() => console.log("tapped")}>
           <Text style={styles.buttonText}>Login</Text>
         </AppButton>
       </View>
