@@ -1,18 +1,22 @@
 import { View, Image, Text, StyleSheet } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import colors from "../config/colors";
 
 const ViewImageScreen = () => {
-  console.log(colors);
   return (
     <View style={styles.imageScreenContainer}>
       <View style={styles.buttonContainer}>
-        <View style={[styles.button, styles.primaryColor]}></View>
-        <View style={[styles.button, styles.secondaryColor]}></View>
+        <MaterialCommunityIcons name="close" color={colors.white} size={35} />
+        <MaterialCommunityIcons
+          name="trash-can-outline"
+          color={colors.white}
+          size={35}
+        />
       </View>
       <Image
         style={styles.imageContainer}
-        source={require("../assets/chair.jpg")}
+        source={require("../assets/Target.bmp")}
       />
     </View>
   );
@@ -20,20 +24,19 @@ const ViewImageScreen = () => {
 const styles = StyleSheet.create({
   imageScreenContainer: {
     paddingTop: 30,
-    flex: 1,
+
     backgroundColor: colors.black,
   },
   buttonContainer: {
+    paddingHorizontal: 10,
     width: "100%",
     height: 70,
-    display: "flex",
+    top: 30,
+    position: "absolute",
     flexDirection: "row",
     justifyContent: "space-between",
   },
   button: {
-    width: 70,
-    height: "100%",
-
     margin: 15,
   },
   imageContainer: {

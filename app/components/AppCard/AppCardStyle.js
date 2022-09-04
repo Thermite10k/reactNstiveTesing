@@ -15,6 +15,14 @@ const styles = StyleSheet.create({
   appCardTextContainer: {
     padding: 20,
   },
+  appCardTitle: {
+    fontWeight: "bold",
+    fontSize: 25,
+    marginBottom: 10,
+  },
+  appCardSubTitle: {
+    color: colors.secondary,
+  },
 });
 
 export default styles;
