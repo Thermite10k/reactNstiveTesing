@@ -6,16 +6,15 @@ import ViewImageScreen from "./app/screens/ViewImageScreen";
 import AppCard from "./app/components/AppCard/AppCard";
 import colors from "./app/config/colors";
 import ListingDetailsSreen from "./app/screens/ListingDetailsSreen";
+import MessagesScreen from "./app/screens/MessagesScreen";
 export default function App() {
   return (
     <View style={styles.container}>
-      <ViewImageScreen />
+      <MessagesScreen />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.cardView,
-  },
+  container: {},
 });
